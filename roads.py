@@ -1,6 +1,6 @@
 from keras.models import Model
 from keras.layers import Input, Conv2D, UpSampling2D, BatchNormalization, Activation, add, concatenate
-from keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 from keras import backend as K
 smooth = 0.0001
 

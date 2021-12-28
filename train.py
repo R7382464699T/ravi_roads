@@ -138,23 +138,5 @@ if __name__ == '__main__':
                         verbose=1,
                         callbacks = callbacks,
                         validation_data=valid_generator(ids_valid),validation_steps=np.ceil(float(len(ids_valid)) / float(BATCH_SIZE)))
-"""
-    callbacks = [EarlyStopping(monitor='val_dice_coef',
-                               patience=10,
-                               verbose=1,
-                               min_delta=1e-4,
-                               mode='max'),
-                 ReduceLROnPlateau(monitor='val_loss',
-                                   factor=0.2,
-                                   patience=3,
-                                   verbose=1,
-                                    min_delta=0.0001,
-                                    cooldown=0,
-                                    min_lr=0,
-                                   mode='max'),
-                 ModelCheckpoint(monitor='val_dice_coef',
-                                 filepath='model_weights.hdf5',
-                                 save_best_only=True,
-                                 mode='max')]
-"""
+
     
